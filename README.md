@@ -2,10 +2,7 @@
 
 ## Dependencies
 ****** 
-Angular 
-Bootstrap 
+  1. Angular 
+  2. Bootstrap 
 
-## 
-****** 
-Angular 
-Bootstrap 
+
