@@ -1,8 +1,3 @@
-
-console.log("hello");
-
-
-
 myApp = angular.module('myApp', []);
 
 
@@ -24,7 +19,8 @@ myApp.controller('AssistanceFormController', ['$scope', '$http', function($scope
 
   $scope.submitForm = function(assitance_form) {
     $scope.submitted = true;
-    $http.post('http://localhost:49567/api/assistance-requests', assitance_form.form.data ).then( function successCallback(response) {
+    console.log( angular.toJson(assitance_form.form));
+    $http.post('http://localhost:49567/api/assistance-requests',angular.toJson(assitance_form.form) ).then( function successCallback(response) {
       errorMessage(response.status);
     }, function errorCallback(response) {
       errorMessage(response.status);
