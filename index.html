@@ -43,10 +43,10 @@
                 <textarea rows="4" name="description" placeholder="Assitance Request Description" ng-model="assistance_form.form.assistance_request.description" class="form-control" required="true" minlength=5 maxlength=500></textarea>
                 <span class="pull-right text-danger" ng-show="assistance_form.description.$error.required"> Required</span>
                 <br>
-                <label class="checkbox-inline"><input type="checkbox" value="" ng-model="assistance_form.terms" required>I herby accept the terms and conditions for THE NETWORK and the privacy policy</label>
+                <label class="checkbox-inline"><input type="checkbox" value="" ng-model="assistance_form.terms" required>I hereby accept the terms and conditions for THE NETWORK and the privacy policy</label>
                 <br>
-                <div class="btn btn-primary pull-right disabled" ng-hide="assistance_form.$valid" > Get Assitance </div>
-                <div class="btn btn-primary pull-right" ng-show="assistance_form.$valid" ng-click="submitForm(assistance_form)" > Get Assitance </div>
+                <div class="btn btn-primary pull-right disabled" ng-hide="assistance_form.$valid" > Get Assistance </div>
+                <div class="btn btn-primary pull-right" ng-show="assistance_form.$valid" ng-click="submitForm(assistance_form)" > Get Assistance </div>
               </fieldset>
             </form>
           </div>  <!--closing tag for the panel body-->
