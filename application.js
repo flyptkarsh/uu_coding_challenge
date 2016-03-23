@@ -36,6 +36,7 @@ myApp.controller('AssistanceFormController', ['$scope', '$http', function($scope
   $http.get( 'http://localhost:49567/api/service-types').then(function successCallback(response) {
     $scope.serviceTypes = response.data.data
   }, function errorCallback(response) {
+    $scope.formError = "Oh no! Something completely unexpected happened!"
   });
 
 
