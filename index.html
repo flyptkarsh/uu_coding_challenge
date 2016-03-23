@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="application.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <div class="panel panel-default col-md-10" ng-app="myApp">
+          <div class="panel-header">
+            <h1> New Assistance Request</h1>
+            <hr>
+          </div> <!--closing tag for the panel header-->
+          <div  class="panel-body">
+
+
+
+            <form name="assistance_form" ng-controller="AssistanceFormController" class="assistance-form">
+              <fieldset ng-disabled="submitted">
+                <div ng-show="formError" class="alert alert-danger"> {{formError}} </div>
+                <div ng-show="successMessage"class="alert alert-success"> {{successMessage}} </div>
+                <input type="text" name="first_name" placeholder="First Name" ng-model="assistance_form.form.assistance_request.contact.first_name" class="form-control" minlength=2 required>
+                <span class="pull-right text-danger" ng-show="assistance_form.first_name.$error.required"> Required</span>
+                <br>
+                <input type="text" name="last_name" placeholder="Last Name" ng-model="assistance_form.form.assistance_request.contact.last_name" class="form-control" minlength=2 required>
+                <span class="pull-right text-danger" ng-show="assistance_form.last_name.$error.required"> Required</span>
+                <br>
+                <input type="email" name="email" placeholder="Email" ng-model="assistance_form.form.assistance_request.contact.email" class="form-control" required>
+                <br>
+                <span class="pull-right text-danger" ng-show="assistance_form.email.$error.required"> Required</span>
+                <br>
+                <select name="service_type" class="form-control" ng-model="assistance_form.form.assistance_request.service_type" required>
+                  <option value="" disabled selected>Select Service Type</option>
+                  <option ng-repeat="type in serviceTypes " value="{{type.id}}">{{ type.display_name }}</option>
+                </select>
+                <span class="pull-right text-danger" ng-show="assistance_form.service_type.$error.required"> Required</span>
+                <br>
+                <textarea rows="4" name="description" placeholder="Assitance Request Description" ng-model="assistance_form.form.assistance_request.description" class="form-control" required="true" minlength=5 maxlength=500></textarea>
+                <span class="pull-right text-danger" ng-show="assistance_form.description.$error.required"> Required</span>
+                <br>
+                <label class="checkbox-inline"><input type="checkbox" value="" ng-model="assistance_form.terms" required>I herby accept the terms and conditions for THE NETWORK and the privacy policy</label>
+                <br>
+                <div class="btn btn-primary pull-right disabled" ng-hide="assistance_form.$valid" ng-click="submitForm(assistance_form)" > Get Assitance </div>
+                <div class="btn btn-primary pull-right" ng-show="assistance_form.$valid" ng-click="submitForm(assistance_form)" > Get Assitance </div>
+                <h1>{{assistance_form.$valid}}</h1>
+              </fieldset>
+            </form>
+          </div>  <!--closing tag for the panel body-->
+       </div> <!--closing tag for the form panel -->
+    </div> <!-- closing tag for the main container -->
+
+
+
+
+  </body>
+
+</html>
