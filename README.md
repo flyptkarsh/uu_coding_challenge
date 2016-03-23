@@ -12,7 +12,7 @@
   * The Mock API will also have to be running on port 49567
 
 ### Issues
-  * Had a bit of trouble with the API, the get request work to send back a response to my post request.
+  * Had a bit of trouble with the API, the get request works fine but it does not send back the expected responses to my post request.
 
   ~~~
     XMLHttpRequest cannot load http://localhost:49567/api/assistance-requests. Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access. The response had HTTP status code 404.
