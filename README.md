@@ -1,7 +1,6 @@
 # Unite Us Coding Challenges
 
-## Dependencies
-****** 
+### Dependencies
   1. Angular 
   2. Bootstrap 
 
