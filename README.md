@@ -1,12 +1,12 @@
 # Unite Us Coding Challenge
 
-### 
+###
 ### Dependencies
   1. Angular
   2. Bootstrap
 
-![end_result](https://github.com/flyptkarsh/uu_coding_challenge/blob/master/cc_form.png?raw=true)
-![end_result](https://github.com/flyptkarsh/uu_coding_challenge/blob/master/completed_form.png?raw=true)
+![end_result](https://github.com/flyptkarsh/uu_coding_challenge/blob/master/cc_form2.png?raw=true)
+![end_result](https://github.com/flyptkarsh/uu_coding_challenge/blob/master/completed_form2.png?raw=true)
 ### To Run
   * Download gist and open the HTML file in the browser.
   * The Mock API will also have to be running on port 49567
