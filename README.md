@@ -1,4 +1,4 @@
-# Unite Us Coding Challenges
+# Unite Us Coding Challenge
 
 ### Dependencies
   1. Angular 
